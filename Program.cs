@@ -33,10 +33,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-else
-{
-    app.UseHttpsRedirection();
-}
+// else
+// {
+//      app.UseHttpsRedirection();
+// }
 
 app.UseCors(policy =>
     policy.AllowAnyOrigin()
@@ -45,5 +45,5 @@ app.UseCors(policy =>
 
 app.UseAuthorization();
 app.MapControllers();
-
+app.MapGet("/", () => "API Calorías funcionando 🚀");
 app.Run();
