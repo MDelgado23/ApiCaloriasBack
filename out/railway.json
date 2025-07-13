@@ -3,6 +3,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "dotnet Backend.dll"
+    "startCommand": "dotnet CaloriasApi.dll"
   }
 }
