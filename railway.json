@@ -3,6 +3,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "dotnet CaloriasApi.dll"
+    "startCommand": "dotnet publish -c Release -o out && dotnet out/CaloriasApi.dll"
   }
 }
