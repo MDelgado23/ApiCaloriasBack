@@ -38,7 +38,8 @@ namespace CaloriasApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Registro>> PostRegistro(Registro registro)
         {
-            registro.Fecha = DateTime.Now;
+            registro.Fecha = TimeZoneInfo
+    .ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Argentina Standard Time"));
 
             _context.Registros.Add(registro);
             await _context.SaveChangesAsync();
